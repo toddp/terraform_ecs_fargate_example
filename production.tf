@@ -8,6 +8,7 @@ locals {
 provider "aws" {
   region  = "${var.region}"
   #profile = "duduribeiro"
+  profile = "toddpinkerton"
 }
 
 resource "aws_key_pair" "key" {

@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "source" {
-  bucket        = "openjobs-experiment-source"
+  bucket        = "openjobs-experiment-source-tp"
   acl           = "private"
   force_destroy = true
 }
@@ -106,8 +106,8 @@ resource "aws_codepipeline" "pipeline" {
       output_artifacts = ["source"]
 
       configuration {
-        Owner      = "duduribeiro"
-        Repo       = "openjobs_experiment"
+        Owner      = "opensanca"
+        Repo       = "opensanca_jobs"
         Branch     = "master"
       }
     }
